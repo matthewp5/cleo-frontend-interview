@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import { ReactComponent as Logo } from '../assets/logo.svg';
+import Button from '../components/Button';
 import Input from '../components/Input';
 import { palette } from '../styles';
 
@@ -26,7 +27,7 @@ function App() {
           <Input label="Amount" onChange={(value) => setAmount(value)} value={amount} />
           <Input label="From Currency" onChange={(value) => setFromCurrency(value)} value={fromCurrency} />
           <Input label="To Currency" onChange={(value) => setToCurrency(value)} value={toCurrency} />
-          <button onClick={convertAmount}>Convert</button>
+          <Button label="Convert" onClick={convertAmount} />
           <span>{convertedAmount}</span>
         </ConverterContainer>
       </ContentContainer>
